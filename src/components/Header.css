@@ -1,0 +1,24 @@
+.app-header {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee; /* Linha sutil abaixo do header */
+  background-color: white; /* Fundo branco */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.nav-icon {
+  margin-left: 20px;
+  cursor: pointer;
+  /* Estilize seus ícones aqui */
+  color: #555;
+}

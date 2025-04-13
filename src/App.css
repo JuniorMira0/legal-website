@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  background-color: #fff; /* Fundo branco */
+  line-height: 1.6; /* Melhor legibilidade */
+  padding: 0 20px; /* Espaçamento lateral */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  transition: background-color 0.3s ease; /* Transição suave para mudanças de tema */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background-color: #333; /* Cor escura dos botões */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  background-color: #555; /* Efeito hover */
+}
+
+h1,
+h2,
+h3 {
+  color: #111; /* Títulos mais escuros */
+}
+
+p {
+  line-height: 1.6;
+  color: #555; /* Texto de parágrafo um pouco mais claro */
+}
+
+/* Estilo base para seções alternadas (fundo cinza) */
+.section-gray {
+  background-color: #f8f8f8; /* Cinza claro para alternar */
+  padding: 60px 0;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-content {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Espaçamento entre texto e imagem */
+  margin-bottom: 40px; /* Espaço antes da próxima seção */
+}
+
+.section-content.reverse {
+  flex-direction: row-reverse; /* Inverte a ordem para layout alternado */
+}
+
+.text-content {
+  flex: 1; /* Ocupa o espaço disponível */
+}
+
+.image-placeholder {
+  flex: 1;
+  background-color: #ddd; /* Placeholder cinza para imagens */
+  min-height: 300px; /* Altura mínima para visualização */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #aaa;
+  font-size: 1.5rem;
+  border-radius: 8px; /* Bordas arredondadas */
 }
