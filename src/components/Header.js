@@ -58,10 +58,14 @@ function Header() {
               target={item.target}
               rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
               title={item.label}
-              className="nav-icon"
+              className="nav-link-desktop"
               aria-label={item.label}
             >
-              {item.icon}
+              <span className="nav-item-icon">{item.icon}</span>
+
+              {item.id !== 'whatsapp' && (
+                <span className="nav-label-desktop">{item.label}</span>
+              )}
             </a>
           ))}
         </nav>

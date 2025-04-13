@@ -4,6 +4,9 @@
   background-color: white;
   position: relative;
   z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .header-container {
@@ -29,6 +32,36 @@
   align-items: center;
 }
 
+.nav-link-desktop {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 25px;
+  cursor: pointer;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+.nav-link-desktop:first-child {
+  margin-left: 0;
+}
+
+.nav-link-desktop:hover {
+  color: #111;
+}
+
+.nav-item-icon svg {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.nav-label-desktop {
+  font-size: 0.85rem;
+  margin-left: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 .nav-icon {
   margin-left: 20px;
   cursor: pointer;
@@ -44,8 +77,6 @@
 .nav-icon:hover {
   color: #111;
 }
-
-/* --- NOVOS ESTILOS PARA RESPONSIVIDADE --- */
 
 /* Ícone Hambúrguer (Mobile) - Escondido por padrão */
 .mobile-menu-icon {
@@ -70,12 +101,14 @@
   flex-direction: column;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.2s ease-in;
 }
 
 .mobile-menu.open {
   display: flex;
   max-height: 500px;
+  opacity: 1;
 }
 
 .mobile-menu-link {
