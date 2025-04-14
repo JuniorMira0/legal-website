@@ -81,3 +81,16 @@ p {
   font-size: 1.5rem;
   border-radius: 8px; /* Bordas arredondadas */
 }
+
+.full-screen-section {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
