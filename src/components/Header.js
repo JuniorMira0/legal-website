@@ -48,7 +48,9 @@ function Header() {
   return (
     <header className="app-header">
       <div className="container header-container">
-        <div className="logo">Guilherme Quintiliano</div>
+        <div className="logo">
+          <FaBalanceScale /> Guilherme Quintiliano
+        </div>
 
         <nav className="nav-container-desktop">
           {navItems.map((item) => (
