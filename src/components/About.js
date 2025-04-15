@@ -12,12 +12,17 @@ function About() {
       <div className="container section-content-about">
         {' '}
         <div className="about-text-content">
-          <h1>Sobre Guilherme Quintiliano</h1>
+          <h1>Sobre</h1>
           <p>
-            Aqui você pode escrever uma descrição sobre você, sua experiência,
-            sua abordagem como advogado, sua formação, etc. Este texto ajudará
-            os visitantes a conhecerem melhor o profissional. Tente ser claro e
-            objetivo.
+            Guilherme Quintiliano Rehme (OAB/PR 111.012), advogado formado pela
+            Unicuritiba, atua em Curitiba-PR desde 2018 com foco em Direito do
+            Consumidor e Direito Civil. Com experiência prática em diversas
+            fases processuais e sistemas judiciais, busca oferecer soluções
+            jurídicas eficientes e personalizadas em todos os estados. Sua
+            prática abrange também em casos específicos relacionados a Viagens.
+            Conte com a sua dedicação e preparo para receber a melhor
+            assistência jurídica, especialmente nas áreas que mais impactam o
+            seu dia a dia.
           </p>
         </div>
         <div className="about-image-container">
