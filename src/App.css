@@ -6,11 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;
-  background-color: #fff; /* Fundo branco */
-  line-height: 1.6; /* Melhor legibilidade */
-  padding: 0 20px; /* Espaçamento lateral */
-  box-sizing: border-box; /* Inclui padding e border no tamanho total */
-  transition: background-color 0.3s ease; /* Transição suave para mudanças de tema */
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 }
 
 button {
-  background-color: #333; /* Cor escura dos botões */
+  background-color: #333;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -31,23 +31,23 @@ button {
 }
 
 button:hover {
-  background-color: #555; /* Efeito hover */
+  background-color: #555;
 }
 
 h1,
 h2,
 h3 {
-  color: #111; /* Títulos mais escuros */
+  color: #111;
 }
 
 p {
   line-height: 1.6;
-  color: #555; /* Texto de parágrafo um pouco mais claro */
+  color: #555;
 }
 
 /* Estilo base para seções alternadas (fundo cinza) */
 .section-gray {
-  background-color: #f8f8f8; /* Cinza claro para alternar */
+  background-color: #f8f8f8;
   padding: 60px 0;
 }
 
@@ -58,28 +58,28 @@ p {
 .section-content {
   display: flex;
   align-items: center;
-  gap: 40px; /* Espaçamento entre texto e imagem */
-  margin-bottom: 40px; /* Espaço antes da próxima seção */
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 .section-content.reverse {
-  flex-direction: row-reverse; /* Inverte a ordem para layout alternado */
+  flex-direction: row-reverse;
 }
 
 .text-content {
-  flex: 1; /* Ocupa o espaço disponível */
+  flex: 1;
 }
 
 .image-placeholder {
   flex: 1;
-  background-color: #ddd; /* Placeholder cinza para imagens */
-  min-height: 300px; /* Altura mínima para visualização */
+  background-color: #ddd;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #aaa;
   font-size: 1.5rem;
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 8px;
 }
 
 .full-screen-section {
