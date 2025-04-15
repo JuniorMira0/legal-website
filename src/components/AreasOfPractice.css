@@ -1,0 +1,72 @@
+.practice-areas-section {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #111;
+  margin-bottom: 50px;
+}
+
+.practice-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.practice-area-card {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.practice-area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .practice-areas-grid {
+    gap: 25px;
+  }
+
+  .practice-area-card {
+    padding: 25px 20px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
