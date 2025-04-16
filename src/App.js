@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
@@ -39,7 +38,12 @@ function ScrollToSection() {
 
 function App() {
   return (
-    <Router>
+    <Router
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <div className="App">
         <Header />
         <main>

@@ -86,9 +86,7 @@ Certifique-se de ter o seguinte instalado em sua máquina:
 
 ## 📁 Estrutura de Pastas
 
-## 📁 Estrutura de Pastas (Simplificada)
-
-egal-website/
+legal-website/
 public/
 └── ...
 src/
