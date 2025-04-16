@@ -1,6 +1,6 @@
 import React from 'react';
 import './FeatureSection1.css';
-import featureImage1 from '../assets/images/logo.jpeg';
+import featureImage1 from '../assets/images/FeatureImg.png';
 
 function FeatureSection1() {
   return (
