@@ -1,48 +1,50 @@
-# Legal Tech - Landing Page em React
+# Landing Page de Serviços Jurídicos - Guilherme Quintiliano Advogado
 
-Este repositório contém o código-fonte de uma landing page moderna para uma plataforma (fictícia) de serviços jurídicos, desenvolvida com React. O projeto visa replicar a estrutura visual e os componentes de um design fornecido, focando em uma interface limpa e profissional.
+Este repositório contém o código-fonte de uma landing page moderna para apresentar os serviços do advogado Guilherme Quintiliano Rehme. Desenvolvida com React, esta página visa oferecer uma interface profissional e informativa para potenciais clientes. Este projeto tem um duplo propósito: servir como um estudo prático de desenvolvimento front-end com React e como a página oficial de apresentação dos serviços do advogado.
 
 ## 🚀 Visão Geral
 
-Landing page responsiva apresentando os serviços e benefícios de uma plataforma de consultoria jurídica. Inclui diversas seções comuns em sites institucionais e de produtos.
+Landing page responsiva projetada para destacar as áreas de atuação e informações de contato do advogado Guilherme Quintiliano Rehme. O foco é fornecer uma apresentação clara e direta para quem busca serviços jurídicos em Curitiba e região.
 
 ## ✨ Screenshot
 
 *(Aqui vai um print da aplicação)*
 
 ![Screenshot do Projeto](URL_DA_IMAGEM_AQUI)
-*Substitua `URL_DA_IMAGEM_AQUI` pelo link de uma imagem do seu projeto.*
 
+## 🎯 Objetivo
 
-## 📋 Funcionalidades Implementadas (Estrutura)
+* **Apresentação Profissional:** Servir como um ponto de contato online profissional para o advogado Guilherme Quintiliano Rehme.
+* **Informação Clara:** Comunicar de forma concisa as áreas de especialização e informações relevantes para contato.
+* **Projeto de Estudo:** Demonstrar habilidades em desenvolvimento front-end com React.
+* **Uso Real:** Esta landing page será utilizada ativamente pelo advogado para apresentar seus serviços.
 
-* **Header:** Cabeçalho fixo com logo e espaço para navegação/ícones.
-* **Hero Section:** Seção principal de destaque com título, descrição e CTA.
-* **Feature Sections:** Múltiplas seções detalhando funcionalidades ou benefícios, com layout alternando imagem/texto.
-* **App Showcase Section:** Seção dedicada a apresentar um aplicativo móvel.
-* **Testimonials Section:** Área para exibir depoimentos de clientes (estrutura de cards).
-* **Trusted By Section:** Exibição de logos de empresas parceiras/clientes.
-* **Call to Action (CTA) Section:** Seção final incentivando o contato ou outra ação.
-* **Footer:** Rodapé com links de navegação (companhia, recursos, legal) e informações de copyright.
+## 📋 Seções Implementadas
+
+* **Header:** Cabeçalho com o nome/logo do advogado e possível navegação (Sobre, Contato).
+* **Sobre:** Seção detalhando a formação, experiência e filosofia de trabalho do advogado Guilherme Quintiliano Rehme.
+* **Áreas de Atuação:** Destaque das principais áreas de prática jurídica (Direito do Consumidor, Direito Civil, Direito do Trabalho, Direito de Viagem).
+* **Contato:** Informações de contato direto (telefone, WhatsApp, e-mail) e possivelmente um formulário de contato.
+* **Footer:** Rodapé com informações de copyright e links legais (Política de Privacidade, Termos de Serviço).
 
 ## 💻 Tecnologias Utilizadas
 
-* **React:** Biblioteca JavaScript para construção da interface de usuário.
-* **CSS:** Para estilização dos componentes (pode ser CSS puro, CSS Modules, Styled Components, etc. - ajuste conforme o seu caso).
-* **JavaScript (ES6+):** Linguagem base para a lógica do React.
+* **React:** Biblioteca JavaScript para a construção da interface de usuário.
+* **CSS:** Para a estilização dos componentes (CSS puro, com organização via arquivos CSS por componente).
+* **JavaScript (ES6+):** Linguagem principal para a lógica e manipulação do React.
 * **HTML5:** Estrutura semântica da página.
 
 ## ⚙️ Pré-requisitos
 
-Antes de começar, você vai precisar ter instalado em sua máquina:
-* [Node.js](https://nodejs.org/en/) (que inclui o npm)
+Certifique-se de ter o seguinte instalado em sua máquina:
+* [Node.js](https://nodejs.org/en/) (incluindo o npm - Node Package Manager)
 * [Yarn](https://yarnpkg.com/) (Opcional, como alternativa ao npm)
 
 ## 🛠️ Instalação e Configuração
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://git@github.com:JuniorMira0/legal-website.git](https://git@github.com:JuniorMira0/legal-website.git)
+    git clone git@github.com:JuniorMira0/legal-website.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
@@ -65,7 +67,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
     # ou
     yarn start
     ```
-    Isso iniciará a aplicação em modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000) (ou a porta indicada no seu terminal) para visualizá-la no navegador. A página será recarregada automaticamente se você fizer edições no código.
+    Isso iniciará a aplicação em modo de desenvolvimento. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar a página. As alterações no código serão automaticamente refletidas.
 
 2.  **Gerar a build de produção:**
     ```bash
@@ -73,17 +75,33 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
     # ou
     yarn build
     ```
-    Isso cria uma pasta `build` com os arquivos otimizados para produção.
+    Este comando cria uma pasta `build` com os arquivos otimizados para produção, prontos para serem deployados em um servidor web.
 
 ## 📁 Estrutura de Pastas (Simplificada)
 
-my-legal-website/
-├── public/         # Arquivos estáticos e index.html base
+legal-website/
+├── public/         # Arquivos estáticos (index.html, imagens, etc.)
 ├── src/
-│   ├── components/ # Componentes React reutilizáveis (Header, Footer, FeatureSection, etc.)
-│   ├── App.js      # Componente principal que monta as seções
-│   ├── App.css     # Estilos globais ou do componente App
-│   └── index.js    # Ponto de entrada da aplicação React
-├── .gitignore      # Arquivos e pastas ignorados pelo Git
-├── package.json    # Metadados do projeto e dependências
-└── README.md       # Este arquivo
+│   ├── components/   # Componentes React reutilizáveis (Header, About, Contact, Footer, etc.)
+│   ├── assets/       # Recursos como imagens e outros arquivos
+│   ├── App.js        # Componente principal que estrutura a landing page
+│   ├── App.css       # Estilos globais ou do componente App
+│   ├── index.js      # Ponto de entrada da aplicação React
+│   └── ...         # Outros arquivos de estilo e componentes
+├── .gitignore      # Especifica arquivos que o Git deve ignorar
+├── package.json    # Informações sobre o projeto e suas dependências
+└── README.md       # Este arquivo (com informações sobre o projeto)
+
+
+## 🤝 Contribuição
+
+Este é um projeto pessoal e freelance para um amigo. Contribuições diretas para este repositório podem não ser o foco principal no momento. No entanto, sinta-se à vontade para explorar o código e utilizá-lo como referência para seus próprios projetos de estudo.
+
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
+
+---
+
+Desenvolvido por Junior Mira para Guilherme Quintiliano Advogado.
