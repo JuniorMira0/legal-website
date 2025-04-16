@@ -7,14 +7,13 @@ import {
   FaBalanceScale,
 } from 'react-icons/fa';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const navItems = [
     {
       id: 'whatsapp',
@@ -31,7 +30,7 @@ function Header() {
         </span>
       ),
       label: 'Sobre',
-      href: '#sobre',
+      href: '/#sobre',
     },
     {
       id: 'servicos',
@@ -41,7 +40,7 @@ function Header() {
         </span>
       ),
       label: 'Áreas de Atuação',
-      href: '#servicos',
+      href: '/#servicos',
     },
   ];
 
@@ -49,49 +48,71 @@ function Header() {
     <header className="app-header">
       <div className="container header-container">
         <div className="logo">
-          <FaBalanceScale /> Guilherme Quintiliano
+          <Link to="/" className="logo-link">
+            <FaBalanceScale /> Guilherme Quintiliano
+          </Link>
         </div>
-
         <nav className="nav-container-desktop">
-          {navItems.map((item) => (
+          {navItems.map((item) =>
+            item.id === 'whatsapp' ? (
+              <a
+                key={item.id}
+                href={item.href}
+                target={item.target}
+                rel={
+                  item.target === '_blank' ? 'noopener noreferrer' : undefined
+                }
+                title={item.label}
+                className="nav-link-desktop"
+                aria-label={item.label}
+              >
+                <span className="nav-item-icon">{item.icon}</span>
+                <span className="nav-label-desktop">{item.label}</span>
+              </a>
+            ) : (
+              <Link
+                key={item.id}
+                to={item.href}
+                title={item.label}
+                className="nav-link-desktop"
+                aria-label={item.label}
+              >
+                <span className="nav-item-icon">{item.icon}</span>
+                <span className="nav-label-desktop">{item.label}</span>
+              </Link>
+            ),
+          )}
+        </nav>
+        <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+      </div>
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        {navItems.map((item) =>
+          item.id === 'whatsapp' ? (
             <a
               key={item.id}
               href={item.href}
               target={item.target}
               rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
-              title={item.label}
-              className="nav-link-desktop"
-              aria-label={item.label}
+              className="mobile-menu-link"
+              onClick={toggleMobileMenu}
             >
-              <span className="nav-item-icon">{item.icon}</span>
-
-              {item.id !== 'whatsapp' && (
-                <span className="nav-label-desktop">{item.label}</span>
-              )}
+              {item.icon}{' '}
+              <span className="mobile-menu-label">{item.label}</span>
             </a>
-          ))}
-        </nav>
-
-        {/* Botão Hambúrguer (só aparece em mobile) */}
-        <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </div>
-      </div>
-
-      {/* Menu Mobile Dropdown */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        {navItems.map((item) => (
-          <a
-            key={item.id}
-            href={item.href}
-            target={item.target}
-            rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
-            className="mobile-menu-link"
-            onClick={toggleMobileMenu}
-          >
-            {item.icon} <span className="mobile-menu-label">{item.label}</span>
-          </a>
-        ))}
+          ) : (
+            <Link
+              key={item.id}
+              to={item.href}
+              className="mobile-menu-link"
+              onClick={toggleMobileMenu}
+            >
+              {item.icon}{' '}
+              <span className="mobile-menu-label">{item.label}</span>
+            </Link>
+          ),
+        )}
       </div>
     </header>
   );

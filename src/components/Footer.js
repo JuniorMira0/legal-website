@@ -1,8 +1,24 @@
 import React from 'react';
 import './Footer.css';
 import { FaWhatsapp } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 
 function Footer() {
+  const location = useLocation();
+
+  const handleFooterNavLinkClick = (targetId) => {
+    if (location.pathname === '/') {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="app-footer">
       <div className="container footer-container">
@@ -11,10 +27,20 @@ function Footer() {
             <h4>Company</h4>
             <ul>
               <li>
-                <a href="#">Sobre</a>
+                <Link
+                  to="/#sobre"
+                  onClick={() => handleFooterNavLinkClick('sobre')}
+                >
+                  Sobre
+                </Link>
               </li>
               <li>
-                <a href="#">Áreas de atuação</a>
+                <Link
+                  to="/#servicos"
+                  onClick={() => handleFooterNavLinkClick('servicos')}
+                >
+                  Áreas de atuação
+                </Link>
               </li>
             </ul>
           </div>
@@ -22,12 +48,12 @@ function Footer() {
             <h4>Resources</h4>
             <ul>
               <li>
-                <a href="#">
+                <span>
                   Blog <span className="span-link">(Em breve)</span>
-                </a>
+                </span>
               </li>
               <li>
-                <a href="#">Contato</a>
+                <span>Contato</span>
               </li>
             </ul>
           </div>
@@ -35,10 +61,14 @@ function Footer() {
             <h4>Legal</h4>
             <ul>
               <li>
-                <a href="#">Privacy Policy</a>
+                <Link to="/privacy-policy" onClick={scrollToTop}>
+                  Privacy Policy
+                </Link>
               </li>
               <li>
-                <a href="#">Terms of Service</a>
+                <Link to="/terms-of-service" onClick={scrollToTop}>
+                  Terms of Service
+                </Link>
               </li>
             </ul>
           </div>
@@ -51,7 +81,7 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <span>
-                <FaWhatsapp />{' '}
+                <FaWhatsapp />
               </span>
             </a>
           </div>

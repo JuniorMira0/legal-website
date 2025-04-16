@@ -1,0 +1,30 @@
+.terms-of-service-page {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 960px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.terms-of-service-page h1 {
+  color: #222;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.terms-of-service-page h2 {
+  color: #444;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.terms-of-service-page h3 {
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.terms-of-service-page p {
+  margin-bottom: 15px;
+}

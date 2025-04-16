@@ -44,7 +44,6 @@ function AreasOfPractice() {
       id="servicos"
       className="practice-areas-section section section-gray"
     >
-      {' '}
       <div className="container">
         <h2 className="section-title">Áreas de Atuação</h2>
         <div className="practice-areas-grid">
