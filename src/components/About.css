@@ -18,16 +18,9 @@
 }
 
 .about-text-content p {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.7;
-  margin-bottom: 0;
-}
-
-.destaque-importante {
-  font-weight: 900;
-  color: rgb(1, 1, 1);
 }
 
 .about-image-container {
