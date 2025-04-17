@@ -13,14 +13,14 @@ const practiceAreas = [
     icon: <FaShoppingCart size={40} />,
     title: 'Direito do Consumidor',
     description:
-      'Defesa dos seus direitos em relações de consumo, buscando soluções justas em casos de produtos defeituosos, serviços inadequados, cobranças indevidas e mais.',
+      'Defesa dos seus direitos em relações de consumo, buscando soluções em casos de produtos/serviços inadequados, cobranças indevidas, publicidade enganosa e mais.',
   },
   {
     id: 'civil',
     icon: <FaGavel size={40} />,
     title: 'Direito Civil',
     description:
-      'Assessoria em questões cíveis gerais, como contratos, obrigações, responsabilidade civil (indenizações), propriedade e questões do dia a dia.',
+      'Assessoria em questões cíveis como contratos, obrigações, responsabilidade civil (indenizações), propriedade, família (consultar se aplicável) e outras demandas do cotidiano.',
   },
   {
     id: 'trabalho',
@@ -34,7 +34,7 @@ const practiceAreas = [
     icon: <FaPlaneDeparture size={40} />,
     title: 'Questões Jurídicas de Viagens',
     description:
-      'Suporte legal em problemas relacionados a viagens, como cancelamentos de voos, extravio de bagagem, problemas com pacotes turísticos e hospedagem.',
+      'Suporte legal em problemas com viagens: cancelamentos/atrasos de voos, extravio de bagagem, questões com pacotes turísticos, hospedagem e direitos do passageiro.',
   },
 ];
 

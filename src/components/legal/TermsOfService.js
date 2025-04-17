@@ -53,7 +53,6 @@ function TermsOfService() {
         Para quaisquer questões sobre estes termos, entre em contato através dos
         canais fornecidos no site.
       </p>
-      {/* Você pode adicionar mais detalhes aos seus termos aqui */}
     </div>
   );
 }

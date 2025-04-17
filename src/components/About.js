@@ -31,7 +31,7 @@ function About() {
         <div className="about-image-container">
           <img
             src={aboutImage}
-            alt="Logo de Guilherme Quintiliano Advogado"
+            alt="Logotipo GQ - Advocacia Guilherme Quintiliano"
             className="about-img"
           />
         </div>
