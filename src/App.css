@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,6 +12,13 @@ body {
   padding: 0 20px;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .container {

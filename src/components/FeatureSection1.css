@@ -87,13 +87,18 @@
 @media (max-width: 768px) {
   .section-content-feature1 {
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 30px;
+    overflow-x: hidden;
   }
 
   .feature1-text-content {
     order: 2;
     text-align: left;
+    max-width: 100%;
     min-width: auto;
+    overflow-wrap: break-word;
   }
 
   .feature1-image-container {
