@@ -10,7 +10,8 @@ Landing page responsiva projetada para destacar as áreas de atuação e informa
 
 _(Aqui vai um print da aplicação)_
 
-![Screenshot do Projeto](URL_DA_IMAGEM_AQUI)
+![Screenshot da landing page completa do site de serviços jurídicos](assets/images/imagemSiteCompleto.png)
+
 
 ## 🎯 Objetivo
 
