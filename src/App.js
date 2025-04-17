@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
@@ -50,35 +46,38 @@ function ScrollToSection() {
 
 function App() {
   return (
-    <Router
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}
-    >
+    <div className="App">
       <ScrollToSection />
-      <div className="App">
-        <Header />
-        <main>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <About />
-                  <FeatureSection1 />
-                  <AreasOfPractice />
-                  <ContactSection />
-                </>
-              }
-            />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+      <Header />
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    Guilherme Quintiliano | Advogado em Curitiba - Cível e
+                    Consumidor
+                  </title>
+                  <meta
+                    name="description"
+                    content="Advogado Guilherme Quintiliano (OAB/PR 111.012) em Curitiba. Atuação em Direito do Consumidor, Cível, Trabalhista e Viagens. Assessoria jurídica personalizada."
+                  />
+                </Helmet>
+                <About />
+                <FeatureSection1 />
+                <AreasOfPractice />
+                <ContactSection />
+              </>
+            }
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

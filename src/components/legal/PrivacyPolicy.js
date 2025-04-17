@@ -1,9 +1,17 @@
 import React from 'react';
 import './PrivacyPolicy.css';
+import { Helmet } from 'react-helmet-async';
 
 function PrivacyPolicy() {
   return (
     <div id="privacy-policy-content" className="privacy-policy-page">
+      <Helmet>
+        <title>Política de Privacidade | Guilherme Quintiliano Advocacia</title>
+        <meta
+          name="description"
+          content="Consulte a Política de Privacidade do website de Guilherme Quintiliano e entenda como seus dados são tratados conforme a LGPD."
+        />
+      </Helmet>
       <h1>Política de Privacidade</h1>
       <p>
         Esta landing page tem como objetivo fornecer informações sobre os
@@ -24,7 +32,6 @@ function PrivacyPolicy() {
         política. Quaisquer dúvidas sobre privacidade podem ser direcionadas
         através dos canais de contato fornecidos no site.
       </p>
-      {/* Você pode adicionar mais detalhes à sua política aqui */}
     </div>
   );
 }

@@ -1,9 +1,17 @@
 import React from 'react';
 import './TermsOfService.css';
+import { Helmet } from 'react-helmet-async';
 
 function TermsOfService() {
   return (
     <div id="terms-of-service-content" className="terms-of-service-page">
+      <Helmet>
+        <title>Termos de Serviço | Guilherme Quintiliano Advocacia</title>
+        <meta
+          name="description"
+          content="Leia os Termos de Serviço para utilização do website de Guilherme Quintiliano Advocacia."
+        />
+      </Helmet>
       <h1>Termos de Serviço</h1>
       <p>
         Ao acessar e utilizar esta landing page, você concorda com os seguintes
