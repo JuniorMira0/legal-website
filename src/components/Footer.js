@@ -98,6 +98,15 @@ function Footer() {
             OAB/PR 111.012
           </p>
         </div>
+        <div className="developer-credit">
+          <a
+            href="https://www.instagram.com/junior.mira_/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Desenvolvido por Junior Mira
+          </a>
+        </div>
       </div>
     </footer>
   );
