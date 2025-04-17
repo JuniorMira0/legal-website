@@ -53,7 +53,12 @@ function Footer() {
                 </span>
               </li>
               <li>
-                <span>Contato</span>
+                <Link
+                  to="/#contato"
+                  onClick={() => handleFooterNavLinkClick('contato')}
+                >
+                  Contato
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,6 +84,7 @@ function Footer() {
               href="https://wa.me/554188050966?text=Olá,%20encontrei%20seu%20contato%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20advogado%20Guilherme%20Quintiliano.%20Pode%20me%20ajudar?"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp"
             >
               <span>
                 <FaWhatsapp />

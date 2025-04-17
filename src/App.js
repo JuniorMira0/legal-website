@@ -9,8 +9,9 @@ import './App.css';
 import Header from './components/Header';
 import About from './components/About';
 import FeatureSection1 from './components/FeatureSection1';
-import Footer from './components/Footer';
 import AreasOfPractice from './components/AreasOfPractice';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import PrivacyPolicy from './components/legal/PrivacyPolicy';
 import TermsOfService from './components/legal/TermsOfService';
 
@@ -19,17 +20,28 @@ function ScrollToSection() {
 
   useEffect(() => {
     if (location.pathname === '/') {
-      if (location.hash === '#servicos') {
-        const servicesSection = document.getElementById('servicos');
-        if (servicesSection) {
-          servicesSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else if (location.hash === '#sobre') {
-        const aboutSection = document.getElementById('sobre');
-        if (aboutSection) {
-          aboutSection.scrollIntoView({ behavior: 'smooth' });
-        }
+      const hash = location.hash.substring(1);
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            const headerOffset =
+              document.querySelector('.app-header')?.offsetHeight || 70;
+            const elementPosition =
+              element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset - 10;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+            });
+          }
+        }, 100);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [location]);
 
@@ -44,6 +56,7 @@ function App() {
         v7_relativeSplatPath: true,
       }}
     >
+      <ScrollToSection />
       <div className="App">
         <Header />
         <main>
@@ -55,6 +68,7 @@ function App() {
                   <About />
                   <FeatureSection1 />
                   <AreasOfPractice />
+                  <ContactSection />
                 </>
               }
             />
@@ -63,7 +77,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <ScrollToSection />
       </div>
     </Router>
   );
