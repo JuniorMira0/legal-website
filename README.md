@@ -14,7 +14,7 @@ _(Aqui vai um print da aplicação)_
 
 ## 
 
-![Acesse a aplicação aqui](https://guilhermequintiliano.netlify.app/)
+[Acesse a aplicação aqui](https://guilhermequintiliano.netlify.app/)
 
 
 ## 🎯 Objetivo
