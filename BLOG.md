@@ -16,8 +16,8 @@ O Netlify Identity está sendo descontinuado, então a opção recomendada é o 
 
 1. Suba este projeto para o GitHub (branch `main`) e confirme que o Netlify publica a partir dele.
 2. Crie uma conta em <https://decapbridge.com>, cadastre o site e conecte o repositório.
-3. Copie os valores que o DecapBridge mostra e cole em `public/admin/config.yml`, no bloco `backend`
-   (descomente as linhas `identity_url`, `gateway_url`, `auth_type` e `base_url`).
+3. Copie a configuração que o DecapBridge mostra em *config.yml* e cole em `public/admin/config.yml`
+   (já feito para este site; o token do GitHub fica só no DecapBridge, nunca no repositório).
 4. No DecapBridge, convide o e-mail do advogado. Ele recebe um convite e define a senha.
 5. Faça o deploy e acesse `https://guilhermequintiliano.netlify.app/admin`.
 
