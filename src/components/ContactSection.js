@@ -59,15 +59,18 @@ function ContactSection() {
   };
 
   return (
-    <section id="contato" className="contact-section section">
+    <section id="contato" className="contact-section section section-warm">
       <div className="container">
-        <h2 className="section-title">Entre em Contato</h2>
-        <p className="contact-subtitle">
-          Tem alguma dúvida ou precisa de assessoria jurídica? Preencha o
-          formulário abaixo ou fale diretamente pelo WhatsApp.
-        </p>
+        <div className="section-head reveal">
+          <span className="eyebrow">Contato</span>
+          <h2 className="section-title">Entre em Contato</h2>
+          <p className="section-lead">
+            Tem alguma dúvida ou precisa de assessoria jurídica? Preencha o
+            formulário abaixo ou fale diretamente pelo WhatsApp.
+          </p>
+        </div>
 
-        <div className="contact-layout-wrapper">
+        <div className="contact-layout-wrapper reveal">
           <div className="contact-form-column">
             <form
               className="contact-form"
@@ -127,17 +130,21 @@ function ContactSection() {
                 />
               </div>
 
-              {status && <p className="form-status">{status}</p>}
+              {status && (
+                <p className="form-status" role="status" aria-live="polite">
+                  {status}
+                </p>
+              )}
 
               <div className="form-button-group">
-                <button type="submit" className="submit-button">
+                <button type="submit" className="btn btn-dark submit-button">
                   Enviar Mensagem
                 </button>
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="whatsapp-button-alt"
+                  className="btn whatsapp-button-alt"
                 >
                   <FaWhatsapp /> Ou Fale pelo WhatsApp
                 </a>

@@ -1,0 +1,38 @@
+# Painel do blog (Decap CMS) — acessível em /admin
+#
+# ATENÇÃO: o bloco `backend` abaixo precisa ser configurado UMA vez (veja BLOG.md).
+# Depois disso o advogado entra em /admin com e-mail e senha e publica sozinho.
+backend:
+  name: git-gateway
+  branch: main
+  # Se usar DecapBridge, descomente e preencha com os dados do painel dele:
+  # identity_url: https://auth.decapbridge.com/sites/SEU_SITE_ID
+  # gateway_url: https://gateway.decapbridge.com
+  # auth_type: pkce
+  # base_url: https://auth.decapbridge.com
+
+locale: pt
+media_folder: public/images/blog
+public_folder: /images/blog
+
+collections:
+  - name: blog
+    label: Artigos do Blog
+    label_singular: Artigo
+    folder: content/blog
+    extension: md
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{category}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Data de publicação, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]", date_format: "DD/MM/YYYY", time_format: "HH:mm" }
+      - label: Categoria
+        name: category
+        widget: select
+        options: ["Consumidor", "Cível", "Trabalhista", "Viagens", "Geral"]
+      - { label: Resumo (aparece na lista e no Google), name: summary, widget: text, hint: "1 ou 2 frases. Informativo, sem prometer resultados." }
+      - { label: Imagem de capa, name: image, widget: image, required: false }
+      - { label: Rascunho (não publicar ainda), name: draft, widget: boolean, default: false }
+      - { label: Texto, name: body, widget: markdown, hint: "Lembrete OAB (Provimento 205/2021): conteúdo informativo e educativo. Sem promessa de resultado, captação de clientes ou comparação com outros advogados." }

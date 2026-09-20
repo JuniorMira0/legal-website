@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# gerados por scripts/build-posts.js
+/public/blog-data
+/public/sitemap.xml
