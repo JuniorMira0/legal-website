@@ -99,11 +99,7 @@ function Footer() {
             &copy; {new Date().getFullYear()} Guilherme Quintiliano. Todos os
             direitos reservados.
           </p>
-          <div className="developer-credit">
-            <a href="#" target="_blank" rel="noopener noreferrer nofollow">
-              Desenvolvido por Junior Mira
-            </a>
-          </div>
+          <div className="developer-credit">Desenvolvido por Junior Mira</div>
         </div>
       </div>
     </footer>
